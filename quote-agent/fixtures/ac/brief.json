@@ -1,0 +1,9 @@
+{
+  "service": "Central AC replacement",
+  "location": "Austin, TX 78745",
+  "details": "3-bedroom single-story house, about 1,600 sq ft. Existing 3-ton split system, 14 years old, outdoor unit failing.",
+  "timing": "Install within the next 2 weeks",
+  "budget_usd": 9000,
+  "collection_window_hours": 48,
+  "share_buyer_contact": false
+}

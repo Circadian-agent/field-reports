@@ -1,0 +1,12 @@
+[
+  {"id": "p1", "name": "Provider A Heating & Air", "channel": "email", "source": "Business website contact page", "status": "quoted",
+   "reply": "Thanks for reaching out. For a 3-ton 16 SEER2 system we would be at $8,450 installed. That includes the new condenser, coil, line set flush, permit and haul-away of the old unit. We can install next Thursday or Friday. No site visit needed if you send photos of the current units."},
+  {"id": "p2", "name": "Provider B Comfort Services", "channel": "contact_form", "source": "Business website quote form", "status": "quoted",
+   "reply": "Ballpark for equipment and labor is $6,900. Permit and disposal are not included and run extra. This is an estimate only, we need a site visit before a firm price. Earliest visit is Monday, install about 10 days out."},
+  {"id": "p3", "name": "Provider C Mechanical", "channel": "email", "source": "Business website contact page", "status": "quoted",
+   "reply": "Our price for a 3-ton replacement is $10,200, including permit and removal of old equipment, plus a 10-year parts and labor warranty. Available to install the week of the 2nd."},
+  {"id": "p4", "name": "Provider D HVAC", "channel": "email", "source": "Business website contact page", "status": "declined",
+   "reply": "Sorry, we are fully booked for the next month and cannot take this on."},
+  {"id": "p5", "name": "Provider E Air Pros", "channel": "phone", "source": "Business listing phone number", "status": "no_reply",
+   "reply": ""}
+]
