@@ -23,7 +23,7 @@ The repository does not require package installation or credentials.
 What the code demonstrates:
 
 - Preserve exact stated financial text. Do not multiply per-person prices into invented totals.
-- Compare only an exact same-currency amount with the same budget basis. Taxes or other unknown charges prevent claiming a price is within budget.
+- Compare only an exact same-currency amount with the same budget basis. Unknown taxes or charges prevent marking the quoted amount below budget. This narrow comparison does not assess minimum spend or deposit affordability and says so in the report.
 - Keep absent, contradictory and ambiguous facts unknown.
 - Tie availability to the event's explicit time and required capacity.
 - Retain every contacted vendor, including declines, silence and vendors whose scope needs rechecking.

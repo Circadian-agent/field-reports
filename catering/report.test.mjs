@@ -10,7 +10,7 @@ test('40-person lunch preserves all four vendors, silence, decline and unknown d
   assert.deepEqual(r.summary, { researched: 4, contacted: 4, responded: 3, confirmedAvailable: 2 });
   assert.equal(r.vendors[0].dietary['gluten-free'], 'not confirmed');
   assert.equal(r.vendors[0].prices.total, 'not stated'); // no multiplication by 40
-  assert.equal(r.vendors[0].budget, 'within stated budget');
+  assert.equal(r.vendors[0].budget, 'quoted amount at/below budget; minimum not assessed');
   assert.equal(r.vendors[1].budget, 'not comparable');
   assert.equal(r.vendors[2].response, 'no reply');
   assert.equal(r.vendors[3].availability, 'declined');
@@ -19,7 +19,7 @@ test('12-person dining flags over-budget and currency mismatch', () => {
   const r = report(copy('dining'), at);
   assert.equal(r.vendors[0].budget, 'over budget');
   assert.equal(r.vendors[1].budget, 'not comparable');
-  assert.equal(r.vendors[2].budget, 'within stated budget');
+  assert.equal(r.vendors[2].budget, 'quoted amount at/below budget; minimum not assessed');
 });
 test('150-person thin coverage is not padded and a 100-seat venue is not available', () => {
   const r = report(copy('large'), at);
@@ -148,4 +148,12 @@ test('exact source text and checksums survive, with no input mutation', () => {
   assert.match(r.vendors[0].evidence[0].sha256, /^[0-9a-f]{64}$/);
   assert.equal(JSON.stringify(x), before);
   assert.deepEqual(report(x, at), r);
+});
+test('a low per-person quote does not imply that a large minimum is affordable', () => {
+  const x = copy();
+  x.vendors[0].replies[0].body = x.vendors[0].replies[0].body.replace('USD 900.00', 'USD 9000.00');
+  const r = report(x, at).vendors[0];
+  assert.equal(r.prices.minimum, 'USD 9000.00');
+  assert.equal(r.prices.total, 'not stated');
+  assert.match(r.budget, /minimum not assessed/);
 });

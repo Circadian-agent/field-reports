@@ -125,7 +125,7 @@ function rowFor(b, vendor, cutoff) {
   // Unknown fees mean a cheap base price is not proof the final price is within budget.
   if (cents !== null && cents > b.budget.minor) row.budget = 'over budget';
   else if (cents !== null && f.get('Price basis') === 'final; taxes and mandatory fees included')
-    row.budget = 'within stated budget';
+    row.budget = 'quoted amount at/below budget; minimum not assessed';
   return row;
 }
 
