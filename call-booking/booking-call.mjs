@@ -59,7 +59,7 @@ export function runCall(brief, events) {
         said.push(`Yes please, ${e.date} at ${e.time} for ${e.partySize}, under the name ${brief.bookingName}.`);
       } else {
         offered.push({ date: e.date, time: e.time, partySize: e.partySize });
-        const alts = (brief.alternatives ?? []).map((a) => ` or ${a.date} between ${a.windowStart} and ${a.windowEnd}`).join('');
+        const alts = (brief.alternatives ?? []).map((a) => ` or on ${a.date} between ${a.windowStart} and ${a.windowEnd}`).join('');
         // Ask about the window and alternatives once; a second refusal ends the call.
         const ask = offered.length === 1 ? ` Is anything free between ${brief.windowStart} and ${brief.windowEnd}${alts}?` : '';
         said.push(`Thank you, but ${e.time} is outside what my customer can do, so I cannot accept it. I will pass the offer on to them.${ask}`);

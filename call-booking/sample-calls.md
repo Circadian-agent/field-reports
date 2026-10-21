@@ -23,7 +23,7 @@ Attempts:
 
 ```
 agent: Hello, this is an AI assistant calling on behalf of Hansen. I would like to book a table for 4 on 2026-10-30, between 19:00 and 20:30. Do you have anything?
-agent: Thank you, but 21:30 is outside what my customer can do, so I cannot accept it. I will pass the offer on to them. Is anything free between 19:00 and 20:30 or 2026-10-31 between 18:00 and 19:00?
+agent: Thank you, but 21:30 is outside what my customer can do, so I cannot accept it. I will pass the offer on to them. Is anything free between 19:00 and 20:30 or on 2026-10-31 between 18:00 and 19:00?
 agent: I understand. Thank you for your time.
 # Informe de reserva: Placeholder Bistro (test line)
 
