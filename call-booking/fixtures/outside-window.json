@@ -1,0 +1,65 @@
+{
+ "brief": {
+  "business": "Placeholder Bistro (test line)",
+  "phone": "+47 00 00 00 00",
+  "timezone": "Europe/Oslo",
+  "openingHours": {
+   "tue": [
+    [
+     "11:00",
+     "22:00"
+    ]
+   ],
+   "wed": [
+    [
+     "11:00",
+     "22:00"
+    ]
+   ],
+   "fri": [
+    [
+     "11:00",
+     "23:00"
+    ]
+   ]
+  },
+  "date": "2026-10-30",
+  "windowStart": "19:00",
+  "windowEnd": "20:30",
+  "partySize": 4,
+  "bookingName": "Hansen",
+  "callbackNumber": "+47 11 11 11 11",
+  "specialRequests": "One high chair.",
+  "alternatives": [
+   {
+    "date": "2026-10-31",
+    "windowStart": "18:00",
+    "windowEnd": "19:00",
+    "partySize": 4
+   }
+  ],
+  "language": "es"
+ },
+ "schedule": [
+  "2026-10-27T10:30:00Z"
+ ],
+ "calls": [
+  [
+   {
+    "type": "greeting",
+    "text": "Placeholder Bistro."
+   },
+   {
+    "type": "offer",
+    "date": "2026-10-30",
+    "time": "21:30",
+    "partySize": 4,
+    "text": "Friday is full. Only 21:30 is left."
+   },
+   {
+    "type": "no_availability",
+    "text": "Nothing earlier, sorry."
+   }
+  ]
+ ]
+}
