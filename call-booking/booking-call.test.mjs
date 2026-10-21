@@ -22,7 +22,7 @@ test('books inside the window, discloses AI up front and when asked, report matc
 
 test('only table outside the window: declines on the call, reports not booked with the offer, in the buyer language', () => {
   const { attempts, text } = run(load('outside-window'));
-  assert.match(attempts[0].said[1], /outside what my customer can do, so I cannot accept it/);
+  assert.match(attempts[0].said[1], /outside what my customer can do, so I cannot accept it\. I will pass the offer on to them\. Is anything free between 19:00 and 20:30 or on 2026-10-31 between 18:00 and 19:00\?$/);
   assert.match(text, /Estado: NO RESERVADO/);
   assert.match(text, /fuera de su horario\):\n- 2026-10-30 21:30, 4/);
   assert.deepEqual(audit(text, attempts), []);
